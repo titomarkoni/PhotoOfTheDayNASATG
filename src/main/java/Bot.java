@@ -42,18 +42,18 @@ public class Bot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return "@TestBot";
+        return "@TestBotYTBot";
     }
 
     @Override
     public String getBotToken() {
-        return "MOqIVh-oLnTgrWAw";
+        return "926947041:AAEEatsTLn3x49mr49zMOqIVh-oLnTgrWAw";
     }
 
     public String input(String msg) throws URISyntaxException, MalformedURLException {
         if (msg.contains("Фото дня")) {
-            getImg();
-            return "Фото дня от NASA дата: " + dateFormat.format(new Date()) + "\nЗаголовок: " + nasa.getTitleNasa();
+            //getImg();
+            return nasa.getImgNasa() + "\nФото дня от NASA дата: " + dateFormat.format(new Date()) + "\nЗаголовок: " + nasa.getTitleNasa();
         } else return "";
     }
 
